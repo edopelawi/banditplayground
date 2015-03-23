@@ -1,0 +1,22 @@
+#!/bin/bash
+
+source create_spec_bin_directory
+
+specFiles=spec/*
+
+echo "compile start."
+for specFile in $specFiles
+do
+	fileName="${specFile##*/}"
+	outputName="${fileName%.*}"
+
+	echo "compiling $fileName..."
+	g++ -std=c++11 \
+	-I. \
+	-Isrc \
+	$specFile \
+	src/*.cpp \
+	-o spec_bin/$outputName
+done
+
+echo "compile done."

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ ! -d spec_bin ]
+	then mkdir spec_bin
+fi
