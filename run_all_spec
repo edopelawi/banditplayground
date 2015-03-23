@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source compile_all_spec
+
+specBins=spec_bin/*
+
+echo "=== spec run start."
+
+for specBin in $specBins
+do
+	fileName="${specFile##*/}"
+	echo "=== running $fileName..."
+	$specBin
+done
+
+echo "=== spec run finished."
