@@ -1,11 +1,17 @@
 #include <bandit/bandit.h>
+#include "IntGenerator.h"
+
 using namespace bandit;
 
 go_bandit([](){
 
-	describe("this first test",[](){
-		it("should fail", [](){
-			AssertThat(true, Equals(false));
+	describe("IntGenerator",[]{
+		IntGenerator generator;
+
+		describe("getOne", [&]{
+			it("should return int 1", [&]{
+				AssertThat(generator.getOne(), Equals(1));
+			});
 		});
 	});
 
