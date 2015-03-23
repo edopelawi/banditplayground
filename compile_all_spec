@@ -13,7 +13,9 @@ do
 	echo "compiling $fileName..."
 	g++ -std=c++11 \
 	-I. \
+	-Isrc \
 	$specFile \
+	src/*.cpp \
 	-o spec_bin/$outputName
 done
 
