@@ -2,5 +2,5 @@
 
 int IntGenerator::getOne()
 {
-	return 0;
+	return 1;
 }
